@@ -23,9 +23,9 @@ Feature: Cucumber Basket
     | 30    | 80  | 100   |
     | 40    | 70  | 100   |
 
-   Scenario Outline: Remove cucumbers to a basket
+   Scenario Outline: Remove cucumbers from a basket
     Given the basket has <start> cucumbers
-    When <remove> cucumbers are removed to the basket
+    When <remove> cucumbers are removed from the basket
     Then the basket contains <total> cucumbers
 
     Examples: Vertical

@@ -16,7 +16,7 @@ def test_add_to_many():
     pass
 
 
-@scenario('../features/cucumbers.feature', 'Remove cucumbers to a basket', example_converters=dict(start=int, remove=int, total=int))
+@scenario('../features/cucumbers.feature', 'Remove cucumbers from a basket', example_converters=dict(start=int, remove=int, total=int))
 def test_remove():
     # tudo que estiver aqui será exceutado após todos os passos do cenário
     pass
@@ -34,7 +34,7 @@ def add_cucumbers(basket, add):
     basket.add(add)
 
 
-@when("<remove> cucumbers are removed to the basket")
+@when("<remove> cucumbers are removed from the basket")
 def remove_cucumbers(basket, remove):
     basket.remove(remove)
 
