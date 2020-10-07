@@ -9,6 +9,10 @@ def test_add():
     # tudo que estiver aqui será exceutado após todos os passos do cenário
     pass
 
+@scenario('../features/cucumbers.feature', 'Remove cucumbers to a basket', example_converters=dict(start=int, remove=int, total=int))
+def test_remove():
+    # tudo que estiver aqui será exceutado após todos os passos do cenário
+    pass
 
 @pytest.fixture
 @given("the basket has <start> cucumbers")
@@ -20,6 +24,11 @@ def basket(start):
 @when("<add> cucumbers are added to the basket")
 def add_cucumbers(basket, add):
     basket.add(add)
+
+
+@when("<remove> cucumbers are removed to the basket")
+def remove_cucumbers(basket, remove):
+    basket.remove(remove)
 
 
 @then("the basket contains <total> cucumbers")

@@ -10,6 +10,16 @@ Feature: Cucumber Basket
     Then the basket contains <total> cucumbers
 
     Examples: Vertical
-    | start  | 12  | 2 | 30  |
-    | add    | 5   | 1 | 90  |
-    | total  | 17  | 3 | 100 |
+    | start  | 12 | 2 | 30  |
+    | add    | 5  | 1 | 90  |
+    | total  | 17 | 3 | 100 |
+
+  Scenario Outline: Remove cucumbers to a basket
+    Given the basket has <start> cucumbers
+    When <remove> cucumbers are removed to the basket
+    Then the basket contains <total> cucumbers
+
+    Examples: Vertical
+    | start  | 12 | 2 | 10 |
+    | remove | 5  | 1 | 11 |
+    | total  | 7  | 1 | 0  |
